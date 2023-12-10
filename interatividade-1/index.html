@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!-- Início do cabeçalho da página -->
+    <meta charset="UTF-8">
+    <!-- Configuração do conjunto de caracteres para UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Configuração para visualização responsiva em dispositivos móveis -->
+    <title>Interatividade com HTML</title>
+    <!-- Título exibido na barra de título do navegador -->
+    <style>
+        .conteudo-oculto {
+            display: none;
+        }
+    </style>
+    <!-- Estilo CSS embutido para ocultar o conteúdo -->
+</head>
+<body>
+    <!-- Início do corpo da página -->
+    <button onclick="revelarConteudo()">Clique para revelar</button>
+    <!-- Botão que aciona a função JavaScript ao ser clicado -->
+    <div id="conteudo" class="conteudo-oculto">
+        <p>Conteúdo oculto que será revelado!</p>
+    </div>
+    <!-- Div com ID "conteudo" e classe "conteudo-oculto" que envolve o conteúdo oculto -->
+    <script>
+        // Início da seção de script
+        function revelarConteudo() {
+            // Função JavaScript acionada pelo clique no botão
+            var elementoConteudo = document.getElementById('conteudo');
+            // Obtém o elemento com o ID "conteudo"
+            elementoConteudo.style.display = 'block';
+            // Altera o estilo para tornar o conteúdo visível
+        }
+    </script>
+    <!-- Fim da seção de script -->
+</body>
+</html>
+<!-- Fim do documento HTML -->

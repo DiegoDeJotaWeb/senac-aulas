@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<!-- Declaração do tipo de documento e idioma da página -->
+
+<head>
+    <!-- Início da seção de cabeçalho da página -->
+    <meta charset="UTF-8">
+    <!-- Configuração do conjunto de caracteres para UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Configuração para visualização responsiva em dispositivos móveis -->
+    <title>Interatividade com HTML e Classes</title>
+    <!-- Título exibido na barra de título do navegador -->
+    <style>
+        /* Início da seção de estilo CSS embutido */
+        .conteudo-oculto {
+            display: none;
+        }
+        /* Classe que oculta elementos, configurando o estilo "display" como "none" */
+    </style>
+    <!-- Fim da seção de estilo CSS embutido -->
+</head>
+ 
+<body>
+    <!-- Início do corpo da página -->
+    <button onclick="revelarConteudo('conteudo1')">Clique para revelar 1</button>
+    <!-- Botão 1 que aciona a função JavaScript com o argumento 'conteudo1' -->
+    <div class="conteudo-oculto conteudo1">
+        <!-- Div com a classe "conteudo-oculto" e uma classe específica "conteudo1" -->
+        <p>Conteúdo 1 oculto que será revelado!</p>
+        <!-- Parágrafo de conteúdo oculto relacionado ao botão 1 -->
+    </div>
+
+    <button onclick="revelarConteudo('conteudo2')">Clique para revelar 2</button>
+    <!-- Botão 2 que aciona a função JavaScript com o argumento 'conteudo2' -->
+    <div class="conteudo-oculto conteudo2">
+        <!-- Div com a classe "conteudo-oculto" e uma classe específica "conteudo2" -->
+        <p>Conteúdo 2 oculto que será revelado!</p>
+        <!-- Parágrafo de conteúdo oculto relacionado ao botão 2 -->
+    </div>
+
+    <button onclick="revelarConteudo('conteudo3')">Clique para revelar 3</button>
+    <!-- Botão 3 que aciona a função JavaScript com o argumento 'conteudo3' -->
+    <div class="conteudo-oculto conteudo3">
+        <!-- Div com a classe "conteudo-oculto" e uma classe específica "conteudo3" -->
+        <p>Conteúdo 3 oculto que será revelado!</p>
+        <!-- Parágrafo de conteúdo oculto relacionado ao botão 3 -->
+    </div>
+
+    <script>
+        // Início da seção de script
+        function revelarConteudo(classeConteudo) {
+            // Função JavaScript acionada pelos cliques nos botões
+            var elementosConteudo = document.querySelectorAll('.conteudo-oculto');
+            // Seleciona todos os elementos com a classe "conteudo-oculto"
+
+            // Oculta todos os elementos com a classe
+            elementosConteudo.forEach(function (elemento) {
+                elemento.style.display = 'none';
+            });
+
+            // Revela apenas o conteúdo associado à classe do botão clicado
+            var elementoVisivel = document.querySelector('.' + classeConteudo);
+            // Seleciona o elemento específico associado à classe passada como argumento
+            elementoVisivel.style.display = 'block';
+            // Altera o estilo para tornar o conteúdo visível
+        }
+    </script>
+    <!-- Fim da seção de script -->
+</body>
+
+</html>
+<!-- Fim do documento HTML -->
