@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<!-- Declaração do tipo de documento e idioma da página -->
+
+<head>
+    <!-- Início da seção de cabeçalho da página -->
+    <meta charset="UTF-8">
+    <!-- Configuração do conjunto de caracteres para UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Configuração para visualização responsiva em dispositivos móveis -->
+    <title>Interatividade com HTML e Classe</title>
+    <!-- Título exibido na barra de título do navegador -->
+    <style>
+        /* Início da seção de estilo CSS embutido */
+        .conteudo-oculto {
+            display: none;
+        }
+
+        /* Classe que oculta elementos, configurando o estilo "display" como "none" */
+    </style>
+    <!-- Fim da seção de estilo CSS embutido -->
+</head>
+
+<body>
+    <!-- Início do corpo da página -->
+    <button onclick="alternarVisibilidade()">Clique para revelar/ocultar</button>
+    <!-- Botão que aciona a função JavaScript ao ser clicado -->
+    <div class="conteudo-oculto">
+        <!-- Div com a classe "conteudo-oculto" envolvendo o conteúdo inicialmente oculto -->
+        <p>Conteúdo oculto que será revelado!</p>
+        <!-- Parágrafo de conteúdo oculto -->
+    </div>
+    <div class="conteudo-oculto">
+        <!-- Div com a classe "conteudo-oculto" envolvendo o conteúdo inicialmente oculto -->
+        <p>Conteúdo oculto que será revelado!</p>
+        <!-- Parágrafo de conteúdo oculto -->
+    </div>
+
+ 
+    <script>
+        // Início da seção de script
+        function alternarVisibilidade() {
+            // Função JavaScript acionada pelo clique no botão
+            var elementoConteudo = document.getElementsByClassName('conteudo-oculto');
+            // Seleciona o elemento com a classe "conteudo-oculto"
+
+            var qtd = elementoConteudo.length;
+            // console.log(qtd);
+
+            for (var i = 0; i < qtd; i++) {
+                //console.log(elementoConteudo[i]);
+                
+                // Verifica se o estilo display é "none" ou vazio
+                if (elementoConteudo[i].style.display === '' || elementoConteudo[i].style.display === 'none') {
+                    elementoConteudo[i].style.display = 'block';
+                } else {
+                    elementoConteudo[i].style.display = 'none';
+                }
+                // Altera o estilo para alternar entre visível (block) e oculto (none)
+            }
+
+
+        }
+    </script>
+    <!-- Fim da seção de script -->
+</body>
+
+</html>
+<!-- Fim do documento HTML -->

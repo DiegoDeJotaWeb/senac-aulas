@@ -15,7 +15,7 @@
         #conteudo-oculto {
             display: none;
         }
-        /* Id que oculta elementos, configurando o estilo "display" como "none" */
+        /* Classe que oculta elementos, configurando o estilo "display" como "none" */
     </style>
     <!-- Fim da seção de estilo CSS embutido -->
 </head>
@@ -25,7 +25,7 @@
     <button onclick="alternarVisibilidade()">Clique para revelar/ocultar</button>
     <!-- Botão que aciona a função JavaScript ao ser clicado -->
     <div id="conteudo-oculto">
-        <!-- Div com a id "conteudo-oculto" envolvendo o conteúdo inicialmente oculto -->
+        <!-- Div com a classe "conteudo-oculto" envolvendo o conteúdo inicialmente oculto -->
         <p>Conteúdo oculto que será revelado!</p>
         <!-- Parágrafo de conteúdo oculto -->
     </div>
@@ -34,7 +34,7 @@
         function alternarVisibilidade() {
             // Função JavaScript acionada pelo clique no botão
             var elementoConteudo = document.querySelector('#conteudo-oculto');
-            // Seleciona o elemento com a id "conteudo-oculto"
+            // Seleciona o elemento com a classe "conteudo-oculto"
 
             // Verifica se o estilo display é "none" ou vazio
             if (elementoConteudo.style.display === '' || elementoConteudo.style.display === 'none') {
